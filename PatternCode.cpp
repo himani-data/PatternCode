@@ -569,6 +569,41 @@ cout<<endl;
 }
 
 
+void print21(int n){
+    for (int i = 1; i <= n; i++) {
+        for (int space = 1; space <= (n - i); space++)
+            cout << " ";
+
+        if (i == 1)
+            cout << "*";
+        else {
+            cout << "*";
+            for (int space = 1; space <= (2 * i - 3); space++)
+                cout << " ";
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // Lower Half
+    for (int i = n - 1; i >= 1; i--) {
+        for (int space = 1; space <= (n - i); space++)
+            cout << " ";
+
+        if (i == 1)
+            cout << "*";
+        else {
+            cout << "*";
+            for (int space = 1; space <= (2 * i - 3); space++)
+                cout << " ";
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    
+}
+
 
 
 
@@ -593,9 +628,10 @@ int main(){
       //print16(n);
      // print17(n);
 //print18(n);
-print19(n);
-print20(n);
-    return 0;
+//print19(n);
+//print20(n);
+print21(n);
+   return 0;
 }
 
 
